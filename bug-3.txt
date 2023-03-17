@@ -1,0 +1,1 @@
+vamos deixar mais claro esse é o arquivo bug-3 e branch bug-3
