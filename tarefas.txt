@@ -1,0 +1,12 @@
+
+ajustar galerias de acordo com data.
+galeria ouro
+galeria prata
+galeria bronze
+
+localizar pagina no botão (garota, trans , garoto)
+
+colocar logo do site na foto de scrapping
+
+
+

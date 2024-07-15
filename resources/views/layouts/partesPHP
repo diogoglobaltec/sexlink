@@ -1,0 +1,165 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary bg-blue-700 btn" data-bs-toggle="modal" data-bs-target="#example">
+Endereço | Telefone.
+</button>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary bg-blue-700 btn" data-bs-toggle="modal" data-bs-target="#example">
+Enviar Fotos
+</button>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary bg-blue-700 btn" data-bs-toggle="modal" data-bs-target="#example">
+Enviar Videos
+</button>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary bg-blue-700 btn" data-bs-toggle="modal" data-bs-target="#example">
+Filme conosco
+</button>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary bg-blue-700 btn" data-bs-toggle="modal" data-bs-target="#example">
+Comprar anúncio
+</button>
+
+
+
+<div class="row align-items-end">
+
+<div class="col">
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="example" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Perfil</h5>
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+
+
+
+
+<form action="{{ route('atualiza_perfil') }}" method="POST">
+
+
+@csrf
+@method('put')
+
+
+<input type="hidden" name='idUser' value='{{$tabelaAcompanhante->id_acompanhante;}}'>
+
+
+
+
+Seu Gênero<br>
+<select name="genero" id="">
+<option>mulher</option>
+<option>homem</option>
+<option>travesti</option>
+<option>homem trans</option>
+
+
+</select>
+<p>
+
+Faz oral sem camisinha ?<br>
+<select name="OralSemCamisinha" id="">
+<option>sim</option>
+<option>não</option>
+</select>
+<p>
+
+Finaliza no oral ?<br>
+<select name="FinalizaOral" id="">
+<option>sim</option>
+<option>não</option>
+</select>
+<p> 
+
+Faz anal ?<br>
+<select name="Anal" id="">
+<option>sim</option>
+<option>não</option>
+</select>
+<p>
+
+Faz dupla penetraçao ? (anal+vaginal)<br>
+<select name="DP" id="">
+<option>sim</option>
+<option>não</option>
+</select>
+<p>
+
+
+
+Faz sexo grupal ?<br>
+<select name="Grupal" id="">
+<option>sim</option>
+<option>não</option>
+</select>
+<p>
+
+Faz Lesbianismo ? (sexo com mulheres)<br>
+<select name="Lesbianismo" id="">
+<option>sim</option>
+<option>não</option>
+</select>
+<p>
+
+Chuva dourada ?  (recebe ou urina no companheiro)<br>
+<select name="ChuvaDourada" id="ChuvaDourada">
+<option>sim</option>
+<option>não</option>
+</select>
+<p>
+
+Deixa filmar o atendimento ?<br>
+<select name="Filma" id="">
+<option>sim</option>
+<option>não</option>
+</select>
+<p>
+
+Deixa fotografar ?<br>
+<select name="Fotografa" id="">
+<option>sim</option>
+<option>não</option>
+</select>
+<p>
+
+Aceita viajar com cliente ?<br>
+<select name="Viaja" id="">
+<option>sim</option>
+<option>não</option>
+</select>
+<p>
+
+descrição do programa.<br>
+<select name="Descricao" id="">
+<option>sim</option>
+<option>não</option>
+</select>
+<p>
+
+
+
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary bg-red-700" data-bs-dismiss="modal">Fechar</button>
+        <button type="submit" class="btn btn-primary bg-blue-700">Salvar</button>
+</form>
+
+      </div>
+    </div>
+  </div>
+</div>
