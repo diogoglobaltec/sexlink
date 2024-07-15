@@ -144,10 +144,6 @@ public function saida(VisitanteService $teste )
     ->get();
 
 
-
-
-
-
     return view('galeria', [
          'saida'=>$saida,
          'saida2'=>$saida2,
