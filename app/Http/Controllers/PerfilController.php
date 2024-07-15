@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\acompanhante;
 use Illuminate\Http\Request;
 use App\Models\foto;
+use App\Sevices\VisitanteService;
 use DB;
 
 class PerfilController extends Controller
@@ -14,9 +15,11 @@ class PerfilController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index($id, VisitanteService $teste)
     {
 
+
+        $VisitaUnica = $teste->VisitanteService();
 
 
 
@@ -37,8 +40,7 @@ visitor()->visit();
 
 
         $perfilgp =
-
-        DB::table('acompanhantes')
+         DB::table('acompanhantes')
         ->join('fotos','acompanhantes.id_acompanhante','=','fotos.id_acompanhante')
         ->join('undergrounds','acompanhantes.id_acompanhante','=','undergrounds.id_acompanhante')
         ->where('fotos.id_acompanhante',$id)
@@ -52,8 +54,28 @@ visitor()->visit();
 
 
 
+ $galeriaOuro= DB::table('acompanhantes')
+    ->join('enderecos','acompanhantes.id_acompanhante','=','enderecos.id_acompanhante')
+    ->join('fotos','acompanhantes.id_acompanhante','=','fotos.id_acompanhante')
+    ->join('undergrounds','acompanhantes.id_acompanhante','=','undergrounds.id_acompanhante')
+    ->where('Genero','Mulher')
+    ->where('galeria','1')
+    ->groupBy('username')
+    ->orderBy('galeria','asc')
+    ->get();
 
-      return view('layouts.perfilPublico', ['perfilgp'=> $perfilgp,'perfilgp2'=> $perfilgp2]);
+
+
+
+
+
+
+        return view('layouts.perfilPublico',
+            ['perfilgp'=> $perfilgp,
+            'perfilgp2'=> $perfilgp2,
+            'galeriaOuro'=> $galeriaOuro,
+            'VisitaUnica'=> $VisitaUnica
+            ]);
 
 
     }

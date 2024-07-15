@@ -72,17 +72,7 @@ class UndergroundController extends Controller
              'iniciaAnuncio'=>$request->iniciaAnuncio,
              'terminaAnuncio'=>$somaDias,
                      ]);
-
     }
-
-
-
-
-
-
-
-
-
 
 
 

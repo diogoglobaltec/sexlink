@@ -23,8 +23,8 @@
 
 @foreach($perfilgp as $perfil)
 <div id="slide-1">
-<a href="/images/{{$perfil->foto}}">
-<img style='height: 100%; width: 100%; object-fit: contain'src="/images/{{$perfil->foto}}"></a>
+<!--a href="/images/{{$perfil->foto}}">
+<img style='height: 100%; width: 100%; object-fit: contain'src="/images/{{$perfil->foto}}"--></a>
 </div>
           @endforeach
 </div>
@@ -36,39 +36,27 @@
   </div>
 </div>
 <div class="col">Galeria Ouro
-      Acompanhante tenha Seu anúncio grátis aqui !<br>
-      Número de visitas hoje:<br>
-      Publicidade para prives/motéis/em geral:<br>
+
+
+@foreach ($galeriaOuro as $testar )
+<!--a href= "{{ url('perfil/'.$testar->id_acompanhante.'') }}">
+<img src="<?php echo asset("/images/$testar->foto")?>" id="imgaleria[]" width="180" onmouseover="demoVisibility()"--><br>
+
+
+        {{ $testar->username  }} <br></a>
+        {{ $testar->telefone }} <br>
+@endforeach
+
+
+
+
+
+
+     Acompanhante tenha Seu anúncio grátis aqui !<br>
+      Número de visitas hoje:{{ $VisitaUnica }}<br>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

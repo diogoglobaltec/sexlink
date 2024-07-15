@@ -56,6 +56,16 @@ public function saidaTs(VisitanteService $teste)
     ->paginate(10);
 
 
+
+
+//para retirar o anúncio do ar:
+//data do termino tem que ser menor que a data atual.
+//ao quando a data atual ultrapassar a data do término
+//o anúncio expira.
+//para isso basta comparar data atual com data do término.
+//
+
+
   $galeriaOuro= DB::table('acompanhantes')
     ->join('enderecos','acompanhantes.id_acompanhante','=','enderecos.id_acompanhante')
     ->join('fotos','acompanhantes.id_acompanhante','=','fotos.id_acompanhante')
