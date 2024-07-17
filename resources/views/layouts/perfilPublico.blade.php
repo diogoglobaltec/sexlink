@@ -35,7 +35,13 @@
           <i class="fa fa-whatsapp" aria-hidden="true">Telefone:{{  $perfilz2->telefone }}</i>
   </div>
 </div>
+
+<!-- não funcionou o width e height -->
+<img src="/marca/whats.png" width="10">
+
 <div class="col">Galeria Ouro
+
+
 
 
 @foreach ($galeriaOuro as $testar )
