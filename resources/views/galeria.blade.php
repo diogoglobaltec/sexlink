@@ -12,7 +12,7 @@
 
 
 <a href= "{{ url('perfil/'.$user->id_acompanhante.'') }}">
-<!--img src="<?php echo asset("/images/$user->foto")?>" id="imgaleria[]" width="80" onmouseover="demoVisibility()"--><br>
+<img src="<?php echo asset("/images/$user->foto")?>" id="imgaleria[]" width="80" onmouseover="demoVisibility()"><br>
 
 
 
@@ -28,7 +28,6 @@
 
 
 <!--a href= "{{ url('perfil/'.$testar->id_acompanhante.'') }}">
-<img src="<?php echo asset("/images/$testar->foto")?>" id="imgaleria[]" width="180" onmouseover="demoVisibility()"--><br>
 
 
 
