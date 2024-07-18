@@ -23,8 +23,8 @@
 
 @foreach($perfilgp as $perfil)
 <div id="slide-1">
-<!--a href="/images/{{$perfil->foto}}">
-<img style='height: 100%; width: 100%; object-fit: contain'src="/images/{{$perfil->foto}}"--></a>
+<a href="/images/{{$perfil->foto}}">
+<img style='height: 100%; width: 100%; object-fit: contain'src="/images/{{$perfil->foto}}"></a>
 </div>
           @endforeach
 </div>
@@ -37,7 +37,6 @@
 </div>
 
 <!-- não funcionou o width e height -->
-<img src="/marca/whats.png" width="10">
 
 <div class="col">Galeria Ouro
 
@@ -45,8 +44,8 @@
 
 
 @foreach ($galeriaOuro as $testar )
-<!--a href= "{{ url('perfil/'.$testar->id_acompanhante.'') }}">
-<img src="<?php echo asset("/images/$testar->foto")?>" id="imgaleria[]" width="180" onmouseover="demoVisibility()"--><br>
+<a href= "{{ url('perfil/'.$testar->id_acompanhante.'') }}">
+<br>
 
 
         {{ $testar->username  }} <br></a>
