@@ -23,7 +23,7 @@ $phone = preg_replace('/\D+/', '', $tel);
 ?>
 
 <a href= "{{ url('perfil/'.$user->id_acompanhante.'') }}">
-<img src="<?php echo asset("/images/$user->foto")?>" id="imgaleria" width="80" onmouseover="demoVisibility()"><br>
+<img src="<?php echo asset("/images/$user->foto")?>" id="imgaleria" width="180" onmouseover="demoVisibility()"><br>
  {{ $user->username  }} <br></a>
 {{ $tel }}<br>
   <a href="{{ url( 'https://wa.me/55'.$phone) }}">
@@ -46,7 +46,7 @@ whatsapp
 
 <a href= "{{ url('perfil/'.$testar->id_acompanhante.'') }}">
 
-<img src="<?php echo asset("/images/$testar->foto")?>" id="imgaleria" width="80" onmouseover="demoVisibility()"><br>
+<img src="<?php echo asset("/images/$testar->foto")?>" id="imgaleria" width="380" onmouseover="demoVisibility()"><br>
 
 
         {{ $testar->username  }} <br></a>
