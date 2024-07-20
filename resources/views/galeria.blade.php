@@ -26,7 +26,7 @@ $phone = preg_replace('/\D+/', '', $tel);
 <img src="<?php echo asset("/images/$user->foto")?>" id="imgaleria" width="80" onmouseover="demoVisibility()"><br>
  {{ $user->username  }} <br></a>
 {{ $tel }}<br>
-  <a href="{{ url( 'https://wa.me/'.$phone) }}">
+  <a href="{{ url( 'https://wa.me/55'.$phone) }}">
 
 <button>
 whatsapp
