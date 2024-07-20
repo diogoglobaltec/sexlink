@@ -110,6 +110,9 @@ Links Acesso
 <div class="position-fixed  ">
 <div class="bg-white mb-1">
 visitas hoje:{{   $VisitaUnica  }} - <a href="">avançado</a>
+</div>
+
+<div>
 Grave conosco  e  ganhe o anúncio grátis !!
 <br>
 </div>
