@@ -41,10 +41,10 @@ Endereço</button>
   Telefone:<br>
   <input type="text" name="telefone" value=""  required><br>
 
-   Estado:<br><select name="estado" id="estado1" value="SP"></select>
+   Estado:<br><select name="estado" id="estado" value="SP"></select>
    <br>
 
-   Cidade:<br><select name="cidade" id="cidade1" value=""></select>
+   Cidade:<br><select name="cidade" id="cidade" value=""></select>
 
 
 

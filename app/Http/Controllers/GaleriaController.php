@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 
+use Illuminate\Support\Str;
 use Shetabit\Visitor\Traits\Visitable;
 use App\Models\User;
 use App\Models\acompanhante;
@@ -79,18 +80,15 @@ public function saidaTs(VisitanteService $teste)
 
 
 
-
-
-
-
-
-
     return view('galeria', [
          'saida'=>$saida,
          'saida2'=>$saida2,
          'VisitaUnica'=> $VisitaUnica,
          'galeriaOuro' => $galeriaOuro
+
     ]);
+
+
 }
 
 

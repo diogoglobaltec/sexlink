@@ -15,41 +15,73 @@
 <body>
 
 
+
 <div class="container">
  <div class="row cols-2">
   <div class="col">Perfil<br>
    <div class="slider">
      <div class="slides">
-
+       <div id="slide-1">
 @foreach($perfilgp as $perfil)
-<div id="slide-1">
-<a href="/images/{{$perfil->foto}}">
-<img style='height: 100%; width: 100%; object-fit: contain'src="/images/{{$perfil->foto}}"></a>
+    <a href="/images/{{$perfil->foto}}">
+    <img style='height: 100%; width: 100%; object-fit: contain'src="/images/{{$perfil->foto}}"></a>
+@endforeach
 </div>
-          @endforeach
 </div>
+</div>
+</div>
+</div>
+</div>
+
+<div>
+<div>
+
 
 @foreach($perfilgp2 as $perfilz2)
-@endforeach
           <i class="fa fa-whatsapp" aria-hidden="true">WhatsApp:</i><br>
           <i class="fa fa-whatsapp" aria-hidden="true">Telefone:{{  $perfilz2->telefone }}</i>
+@endforeach
+
   </div>
 </div>
 
 <!-- não funcionou o width e height -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="col">Galeria Ouro
 
 
-
-
 @foreach ($galeriaOuro as $testar )
+
+<div class="row" >
+
+
+
 <a href= "{{ url('perfil/'.$testar->id_acompanhante.'') }}">
 <br>
 
-
         {{ $testar->username  }} <br></a>
         {{ $testar->telefone }} <br>
+
+
+
+
+</div>
+
+
 @endforeach
 
 
@@ -62,6 +94,13 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
 
 
 
