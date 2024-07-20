@@ -21,18 +21,19 @@
   <div class="col">Perfil<br>
    <div class="slider">
      <div class="slides">
-       <div id="slide-1">
 @foreach($perfilgp as $perfil)
+
+       <div id="slide-1">
+
     <a href="/images/{{$perfil->foto}}">
     <img style='height: 100%; width: 100%; object-fit: contain'src="/images/{{$perfil->foto}}"></a>
-@endforeach
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 
+   </div>
+
+@endforeach
+          </div>
+
+      </div>
 <div>
 <div>
 
