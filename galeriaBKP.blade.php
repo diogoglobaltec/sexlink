@@ -16,6 +16,10 @@
 <body>
 
 
+
+
+
+
 @if (Route::has('login'))
 @auth
 <!-- LOGADO -->

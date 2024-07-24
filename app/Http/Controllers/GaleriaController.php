@@ -59,6 +59,8 @@ public function saidaTs(VisitanteService $teste)
 
 
 
+
+
 //para retirar o anúncio do ar:
 //data do termino tem que ser menor que a data atual.
 //ao quando a data atual ultrapassar a data do término

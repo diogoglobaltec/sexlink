@@ -31,10 +31,17 @@ $phone = preg_replace('/\D+/', '', $tel);
 
     </div>
     <div class="col">
+
+
+
+
+
+
+
 Nome:{{$user->username}} <br>
 Cidade: {{$user->cidade}} <br>
 Região:{{$user->regiao }} <br>
-Telefone:{{$phone }}
+<!--Telefone:{{$phone}} -->
  <a href="{{ url( 'https://wa.me/55'.$phone) }}"><br>
 <button>
 whatsapp

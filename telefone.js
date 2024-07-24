@@ -14,8 +14,7 @@ client.on('ready', () => {
     console.log('Client is ready!');
 
 
- 
-    
+
 
 
 
@@ -25,8 +24,8 @@ client.on('ready', () => {
 client.initialize();
 
 
- 
 
- 
+
+
 
 
