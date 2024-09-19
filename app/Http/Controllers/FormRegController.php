@@ -70,6 +70,9 @@ class FormRegController extends Controller
                         'terminaAnuncio'=>'0000-00-00',
                                  ]);
 
+return redirect('/dashboard');
+
+
                 }
 
             }

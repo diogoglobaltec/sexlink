@@ -75,17 +75,14 @@ console.log(arrayLimpoFotos.length);
 
 
 
+
+
+       console.log(arrayLimpo)
+
+
    function FotoEach(EachFoto){
-
-
     fotoacomp[b] = arrayLimpoFotos[b]
-
-
-
-
-
     b++;
-
 
    }
 
@@ -96,13 +93,6 @@ console.log(arrayLimpoFotos.length);
 
    await fotos.forEach(FotoEach);
 
-
-
-
-
-
-
-
 //limpar array nome e telefone.
 
     function imprime(item){
@@ -110,16 +100,18 @@ console.log(arrayLimpoFotos.length);
 
       if(a <= arrayLimpo.length-1){
 
-
-
-
       InicioDoTelefone = arrayLimpo[a].indexOf("(");
 
 
+          if(InicioDoTelefone == -1){
 
 
+              console.log('telefone sem número')
+              console.log('telefone sem número')
+              console.log('telefone sem número')
+              console.log('telefone sem número')
 
-
+          }
 
 
       nome[a] = arrayLimpo[a].slice(0,InicioDoTelefone)
@@ -147,6 +139,10 @@ console.log(arrayLimpoFotos.length);
 
 
 
+
+          console.log(telefone)
+          console.log(telefone)
+          console.log(telefone)
 
 
 

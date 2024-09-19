@@ -38,6 +38,9 @@ Endereço</button>
 <input type="text" name='IdUser' value='{{ auth()->user()->id;}}'>
 
 
+asdfasdf
+
+
   Telefone:<br>
   <input type="text" name="telefone" value=""  required><br>
 

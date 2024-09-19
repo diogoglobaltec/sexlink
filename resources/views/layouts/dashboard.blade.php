@@ -1,8 +1,5 @@
 
-
-
-
-<x-app-layout> 
+<x-app-layout>
 
 
 <x-slot name="header">
@@ -24,7 +21,7 @@ Editar Perfil
       </div>
       <div class="modal-body">
 
-      
+
 <form action="{{ route('registra_perfil') }}" method="POST" >
 
 
@@ -86,7 +83,7 @@ Finaliza no oral ?<br>
 <option>sim</option>
 <option>não</option>
 </select>
-<p> 
+<p>
 
 Faz anal ?<br>
 <select name="Anal" id="">
@@ -175,6 +172,7 @@ descrição do programa.<br>
             @section('endereco')
 
 
+
 <script src="/js/cidades-estados-js/cidades-estados.js">
 </script>
 
@@ -192,7 +190,7 @@ Endereço</button>
       </div>
       <div class="modal-body">
 
- 
+
 
 
       <div class="row">
@@ -211,17 +209,18 @@ Endereço</button>
 <input type="hidden" name='IdUser' value='{{ auth()->user()->id;}}'>
 
 
-  Telefone:<br>
+
+
+   Telefone:<br>
   <input type="text" name="telefone" value=""  required><br>
 
    Estado:<br><select name="estado" id="estado1" value="SP"></select>
    <br>
-   
-   Cidade:<br><select name="cidade" id="cidade1" value=""></select>
 
+   Cidade:<br><select name="cidade" id="cidade1" value="" onblur=pegacidade()></select>
 
- 
     <br /> <br />
+
 
 Região:<br>
 <select name="regiao">
@@ -291,7 +290,7 @@ Fotos</button>
       <div class="modal-body">
 
 
- 
+
 
       <form action="{{ route('atualiza_perfil') }}" method="post" enctype="multipart/form-data">
 
@@ -300,16 +299,16 @@ Fotos</button>
         @csrf
 
 
-        <input type="file" name='file[]' multiple> 
-        <input type="hidden" name="id_acompanhante" 
+        <input type="file" name='file[]' multiple>
+        <input type="hidden" name="id_acompanhante"
         value="{{auth()->user()->id }}"><br>
-    
+
         Faça uma descrição das fotos enviadas:<br>
         <input type="text" name="descricao" value="">
 
-      
 
-          
+
+
 
 
 
@@ -340,11 +339,12 @@ comprar anúncio</button>
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">
 
+
 Efetue o pagamento no email pix:<br>
 globaltecmedia@gmail.com <br>
-e entre em contato pelo WhatsApp:<br> 
+e entre em contato pelo WhatsApp:<br>
 011-94628-1251<br>
-          </h5> 
+          </h5>
        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -357,23 +357,23 @@ e entre em contato pelo WhatsApp:<br>
         *Topo em todas as páginas.<br>
         *Publicidade direcioanada para contatos.<br>
         *redes sociais<br>
-        
+
         <div class="text-warning bg-dark">
         Prata - R$ 500 *  Segunda página.</div>
         *Publicidade direcioanada para contatos.<br>
         *redes sociais<br>
 
         <div class="text-warning bg-dark">
-        Bronze - R$ 100 * Terceira página.</div> 
+        Bronze - R$ 100 * Terceira página.</div>
         *redes sociais
 
         <div class="text-light bg-danger">
       Quer ganhar anúncio ouro ?<br>
-      
-      </div> 
+
+      </div>
       <div>
       Grave uma cena pornô conosco e <br>
-      ganhe anúncio ouro o mês inteiro.<br> 
+      ganhe anúncio ouro o mês inteiro.<br>
       Contato: 011-94628-1251. <br>
         </div>
 
@@ -381,7 +381,7 @@ e entre em contato pelo WhatsApp:<br>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary bg-red-700" data-bs-dismiss="modal">Fechar</button>
-       
+
 </form>
 
       </div>
@@ -423,7 +423,7 @@ filmar conosco</button>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary bg-red-700" data-bs-dismiss="modal">Fechar</button>
-        
+
 </form>
 
       </div>
@@ -441,11 +441,11 @@ filmar conosco</button>
 
               <div class="col">
 
-       
+
 
 
       @foreach ($conteudoTabelaAcompanhante as $tabelaAcompanhante)
-      
+
 
               Informações de atendimento:<br>
       Gênero:
@@ -467,7 +467,7 @@ filmar conosco</button>
 
       Finaliza no Oral:
       <b class="text-danger">
-             {{$tabelaAcompanhante->FinalizaOral }}       
+             {{$tabelaAcompanhante->FinalizaOral }}
         </b><br>
 
 
@@ -481,41 +481,41 @@ filmar conosco</button>
              {{$tabelaAcompanhante->Anal }} <br>
              </b>
 
-             Faz Grupal:       
+             Faz Grupal:
       <b class="text-danger">
              {{$tabelaAcompanhante->Grupal }} <br>
              </b>
 
 
-             Faz sexo com mulheres: 
-      <b class="text-danger">      
+             Faz sexo com mulheres:
+      <b class="text-danger">
              {{$tabelaAcompanhante->Lesbianismo }} <br>
              </b>
 
-             Faz Chuva dourada:     
-      <b class="text-danger">   
+             Faz Chuva dourada:
+      <b class="text-danger">
              {{$tabelaAcompanhante->ChuvaDourada }} <br>
              </b>
 
-             Deixa Filmar:       
+             Deixa Filmar:
       <b class="text-danger">
              {{$tabelaAcompanhante->Filma }} <br>
              </b>
 
-             Deixa Fotografar:      
-      <b class="text-danger"> 
+             Deixa Fotografar:
+      <b class="text-danger">
              {{$tabelaAcompanhante->Fotografa }} <br>
              </b>
 
              Está disponível para viagens:
-      <b class="text-danger">       
+      <b class="text-danger">
              {{$tabelaAcompanhante->Viaja }} <br>
              </b>
 
-             Descrição do seu atendimento:     <br>  
+             Descrição do seu atendimento:     <br>
              {{$tabelaAcompanhante->descricao }} <br>
 
-      
+
       @endforeach
 
 </div>
@@ -528,11 +528,11 @@ filmar conosco</button>
 
 
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-  
 
-     
 
-      
+
+
+
 
 
 
@@ -541,12 +541,12 @@ filmar conosco</button>
             <p>Off-Line<p>
             @else
             Seu anúncio está:
-              
-            <p><a href={{$underground}}>On-Line.</a><p> 
+
+            <p><a href={{$underground}}>On-Line.</a><p>
             @endif
 
 
-        
+
 
             Falta:<br>
             @foreach ($pagamento as $pago)
@@ -560,9 +560,9 @@ filmar conosco</button>
             @elseif(count($pagamento)===0)
             igual a zero.
             @endif
-           
-            @endforeach  
-       
+
+            @endforeach
+
             @if(count($conteudoTabelaAcompanhante)===0)
             Editar Perfil.<br>
             @endif
@@ -574,26 +574,6 @@ filmar conosco</button>
             @if(count($conteudoTabelaFoto)===0)
             Enviar Fotos.<br>
             @endif
-
-        
-     
-
-       
-           
-
-       
-
-
-
-
-
-
-    
-
-    
-         
-   
-
 
 <p>
          <br>Recados:<br>
@@ -607,7 +587,7 @@ filmar conosco</button>
         {{$recados->local;}}
 
         @endforeach
-   
+
 
 
         </h2>
@@ -617,5 +597,9 @@ filmar conosco</button>
     </x-slot>
 
 </x-app-layout>
+
+
+<script src="/js/geo.js">
+</script>
 
 

@@ -28,7 +28,7 @@ const download = require('download');
 
     const browser = await puppeteer.launch({ headless: false  },{product : "chrome" });
     const page = await browser.newPage();
-    await page.goto('https://www.photoacompanhantes.com/travestis/sao-paulo/');
+    await page.goto('https://www.photoacompanhantes.com/travestis/sao-paulo/5');
 
 
 
@@ -116,7 +116,9 @@ console.log(arrayLimpoFotos.length);
       InicioDoTelefone = arrayLimpo[a].indexOf("(");
 
 
-
+console.log('saida da variavel InicioDoTelefone'+InicioDoTelefone)
+console.log('saida da variavel InicioDoTelefone'+InicioDoTelefone)
+console.log('saida da variavel InicioDoTelefone'+InicioDoTelefone)
 
 
 

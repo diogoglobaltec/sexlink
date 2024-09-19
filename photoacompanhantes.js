@@ -3,6 +3,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const { isArray } = require('lodash');
 const download = require('download');
+const {log} = require('console');
 
 
    (async () => {
@@ -59,6 +60,11 @@ const download = require('download');
     arrayLimpoFotos = fotos.slice(9,tamanhoArrayFotos)
 
 
+
+
+
+
+
    var a = 0;
    var b = 0;
 
@@ -66,7 +72,7 @@ const download = require('download');
    const nome = []
    const telefone = []
    const fotoacomp = []
-
+   const testar = []
 
 
 console.log(arrayLimpo.length);
@@ -75,17 +81,14 @@ console.log(arrayLimpoFotos.length);
 
 
 
+
+
+       console.log(arrayLimpo)
+
+
    function FotoEach(EachFoto){
-
-
     fotoacomp[b] = arrayLimpoFotos[b]
-
-
-
-
-
     b++;
-
 
    }
 
@@ -96,13 +99,6 @@ console.log(arrayLimpoFotos.length);
 
    await fotos.forEach(FotoEach);
 
-
-
-
-
-
-
-
 //limpar array nome e telefone.
 
     function imprime(item){
@@ -110,12 +106,34 @@ console.log(arrayLimpoFotos.length);
 
       if(a <= arrayLimpo.length-1){
 
-
-
-
       InicioDoTelefone = arrayLimpo[a].indexOf("(");
 
 
+
+
+
+
+console.log('imprime variável InicioDoTelefone :'+ InicioDoTelefone)
+
+
+
+
+          if(InicioDoTelefone == -1){
+
+
+              console.log('telefone sem número')
+              console.log('telefone sem número')
+              console.log('telefone sem número')
+              console.log('telefone sem número')
+
+          }
+
+
+
+//console.log(tamanhoArrayFotos)
+
+console.log('nome e telefone no anúncio em array')
+console.log(arrayLimpo)
 
 
 
@@ -134,7 +152,9 @@ console.log(arrayLimpoFotos.length);
       telefone[a] = arrayLimpo[a].slice(InicioDoTelefone,InicioDoTelefone+15)
 
 
-      console.log(telefone[a])
+
+      const testar = telefone.filter(telefone =>telefone.length > 3);
+
 
       console.log("                       Foto GP")
 
@@ -148,16 +168,44 @@ console.log(arrayLimpoFotos.length);
 
 
 
+          //verificar se existe diferença entre quantidade de nomes/usuários e numeros de telefone adicionados no banco.
+          //pode haver menos telefones e isso está causando erro ao puxar valor na tabela underground.
+          //
+          //
+          //
+          //ERRO............................  tentando resolver
+          //
+          //
+          //
+          //
+          //
 
 
 
 
+          console.log(telefone.length)
+          console.log(nome.length)
 
 
+
+
+          NumTelQuebrado = nome.length;
+          NumTelOk       = testar.length;
+
+       console.log(testar)
+       console.log(nome)
+
+
+
+          //aqui comprovo minha tese tenho nomes diferente da quantidade de numeros de telefone ....
+          //como resolver ?
+          //
+          //
+       console.log('quantidades de telefones : '+testar.length)
+       console.log('quantidades de nomes : '+nome.length)
 
 
       a++
-
 
 
       }
@@ -165,6 +213,27 @@ console.log(arrayLimpoFotos.length);
       }
 
  await urls.forEach(imprime);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -189,7 +258,15 @@ console.log(arrayLimpoFotos.length);
   const resultado = await database.sync();
 
 
-      LoopParaAdicionar = nome.length-1;
+
+     //modificado  retirando -1 do:  testar.length-1,  testar.length = 0
+      LoopParaAdicionar = testar.length;
+
+
+
+console.log('contagem de LoopParaAdicionar');
+
+
 
       for(inicia=0;inicia<LoopParaAdicionar;inicia++){
 
@@ -224,6 +301,14 @@ console.log(arrayLimpoFotos.length);
           });
 
 
+console.log(resultadoCreate)
+console.log(resultadoCreate)
+console.log(resultadoCreate)
+console.log(resultadoCreate)
+console.log(resultadoCreate)
+console.log(resultadoCreate)
+console.log(resultadoCreate)
+
 
           if (SaidaDeposito === null) {
             console.log('Not found!');
@@ -243,6 +328,7 @@ console.log(arrayLimpoFotos.length);
 
 
 
+
           //pegar o id do cadastro criado
 
           const PegarIdCriado = await Deposito.findAll({
@@ -252,8 +338,6 @@ console.log(arrayLimpoFotos.length);
             },attributes:['id','name']
 
           });
-
-
 
 
 
@@ -268,7 +352,7 @@ console.log(arrayLimpoFotos.length);
 
             id_acompanhante:PegarIdCriado[0].id,
             name:PegarIdCriado[0].name,
-            telefone:telefone[inicia],
+            telefone:testar[inicia],
             estado:'SP',
             cidade:'São Paulo',
             regiao:'SP',
@@ -282,6 +366,7 @@ console.log(arrayLimpoFotos.length);
 
 
           const undergroundDB = await underground.create({
+
 
             id_acompanhante:PegarIdCriado[0].id,
             galeria:5,
@@ -319,6 +404,7 @@ console.log(arrayLimpoFotos.length);
             updated_at: '2023-08-02 02:55:22',
 
           })
+
 
 
 
