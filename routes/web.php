@@ -203,13 +203,6 @@ Route::middleware([
 
 
 
-    Route::get('anals', function() {
-        $img = Image::make('https://tb-lb.sb-cd.com/t/10618374/1/0/w:1280/t6-enh/anal-gape-webcam-insertion.jpg')->resize(300, 200);
-        return $img->response('jpg');
-    });
-
-
-
 
     Route::get('/underground', [App\Http\Controllers\UndergroundController::class, 'index'])->name('underground');
 
