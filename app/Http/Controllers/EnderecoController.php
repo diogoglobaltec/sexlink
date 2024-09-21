@@ -39,13 +39,13 @@ class EnderecoController extends Controller
             DB::table('enderecos')
             ->updateOrInsert(
         ['id_acompanhante'=>$request->IdUser],
-        ['telefone'=>$request->telefone,                
+        ['telefone'=>$request->telefone,
         'estado'=>$request->estado,
         'cidade'=>$request->cidade,
                 'regiao'=>$request->regiao,
                 'bairro'=>$request->bairro,
                 'rua'=>$request->rua,
-                'numero'=>$request->numero]  
+                'numero'=>$request->numero]
     );
 
 
@@ -53,7 +53,7 @@ class EnderecoController extends Controller
 
         }
         else{
-           
+
 
             endereco::create([
                 'id_acompanhante'=>$request->IdUser,
@@ -71,9 +71,9 @@ class EnderecoController extends Controller
 
         }
 
+return redirect('/dashboard');
 
 
-       
 
 
 
