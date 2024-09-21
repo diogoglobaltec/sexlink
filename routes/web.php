@@ -208,7 +208,7 @@ Route::middleware([
 
 
 
-    Route::put('/undergroundzzz', [App\Http\Controllers\UndergroundController::class, 'atualizar'])->name('underground');
+ //   Route::put('/undergroundzzz', [App\Http\Controllers\UndergroundController::class, 'atualizar'])->name('underground');
 
 
 
