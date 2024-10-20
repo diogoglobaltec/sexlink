@@ -25,18 +25,8 @@ $phone = preg_replace('/\D+/', '', $tel);
 <br>
  <p>
 
-
-
-
-
     </div>
     <div class="col">
-
-
-
-
-
-
 
 Nome:{{$user->username}} <br>
 Cidade: {{$user->cidade}} <br>
