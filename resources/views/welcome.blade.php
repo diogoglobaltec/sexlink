@@ -47,7 +47,7 @@ Acompanhantes:<br>
 </h4>
 </div>
 
-<div class="Itens BackColorTs">
+<div class="Itens BackColorGp">
 
 
 <img src="/marca/tsentrada.jpg" class="imgOpaca">

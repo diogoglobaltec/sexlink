@@ -1,0 +1,64 @@
+body{
+
+    background-color: #000;
+    color: #699;
+}
+
+
+
+/* grade */
+
+.Grade{
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+  grid-column-gap: 10px;
+
+}
+
+.Itens {
+padding:20px;
+}
+
+.BackColorTs{
+
+    background-color: #a1a1;
+    color: #ff3355;
+}
+
+
+.BackColorGp{
+
+    background-color: #a1a1;
+    color: #ffff;
+}
+
+
+/* imagens */
+
+.imgOpaca{
+
+    z-index:-1;
+    position: absolute;
+    opacity: 0.4;
+    width:30%;
+    height: 50%;
+}
+
+
+
+/* links */
+a:hover{
+
+    background-color: #00ff;
+
+}
+
+
+
+a{
+
+    color:#fff;
+
+}
+
+

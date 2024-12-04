@@ -7,11 +7,10 @@
 
 @foreach ($saida2 as $user)
 
-
-
 <div class="container">
   <div class="row">
     <div class="col">
+
 
 <?php
 //Limpa caracteres do telefone.
@@ -23,10 +22,10 @@ $phone = preg_replace('/\D+/', '', $tel);
 <img src="<?php echo asset("/images/$user->foto")?>" id="imgaleria" width="180" onmouseover="demoVisibility()"><br>
 <br></a>
 <br>
- <p>
+<p>
 
-    </div>
-    <div class="col">
+</div>
+<div class="col">
 
 Nome:{{$user->username}} <br>
 Cidade: {{$user->cidade}} <br>

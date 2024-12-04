@@ -217,7 +217,7 @@ Endereço</button>
    Estado:<br><select name="estado" id="estado1" value="SP"></select>
    <br>
 
-   Cidade:<br><select name="cidade" id="cidade1" value="" onblur=pegacidade()></select>
+   Cidade:<br><select name="cidade" id="cidade1" value="" ></select>
 
     <br /> <br />
 
@@ -236,10 +236,10 @@ Bairro:<br>
 <input type='text' name='bairro' required>
 <br>
 Rua:<br>
-<input type="text" name="rua" required>
+<input type="text" name="rua" id="rua"   onblur=pegacidade() required>
 <br>
 Numero:<br>
-<input type="text" name="numero"  required>
+<input type="text" name="numero" id="numero" onblur=pegacidade() required>
 </div>
 </div>
 

@@ -18,8 +18,13 @@
 
 
 <div class="container ">
+
+
 <div class=" fixed-top container text-center ">
 <div class="row ">
+
+
+
 
 @if (Route::has('login'))
 @auth
@@ -27,6 +32,11 @@
 
 <!-- primeira coluna -->
 <div class="shadow-sm p-2 mb-1 bg-white col">
+
+
+
+
+Ocultar imagens do site.<input type="checkbox" id="ocultaimg" onclick="demoVisibility"><br>
 
 logado
 
@@ -39,14 +49,14 @@ logado
 
 <div class="shadow-sm p-2 mb-1 bg-white col">
 
-deslogado
+Ocultar imagens do site.<input type="checkbox" id="ocultaimg" onclick="demoVisibility()"><br>
 
+deslogado
 
 </div>
 <!-- Fim primeira coluna deslogado -->
 @endif
 @endauth
-
 
 
 
