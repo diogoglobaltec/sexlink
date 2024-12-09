@@ -12,52 +12,26 @@
 
     </head>
     <body>
-           @if (Route::has('login'))
-                    @auth
-                        <a href="{{ url('/dashboard') }}" >Dashboard</a>
+                         @if (Route::has('login'))
+                         @auth
+
+                        @extends('WelcomeLogado')
+                        @section('PainelUser')
+                        <div class="">
+<a href="{{ url('/dashboard') }}" >Painel Usuário.</a>
+                        </div>
+                        @stop
+
+
+
 
                         @else
-<div class="Grade">
-
-<div class="Itens">
-                        <a href="{{ route('login') }}">Entrar</a>
-</div>
-
-<div class="Itens">Faça seu: <a href="{{ route('register')}}">Anúncio</a><br>
-Fale conosco: Telegram - Whatsapp.
+<!-- deslogado -->
 
 
-</div>
-
-
-</div>
-
-<div class="Grade">
-
-<div class="Itens BackColorGp">
-
-
-<img src="/marca/peituda.png" class="imgOpaca">
-
-<h3>Garotas</h3><br>
-
-<h4>Grupo Telegram : <br>
-Acompanhantes:<br>
-<a href="{{route('galeria')}}">Garotas</a><br>
-</h4>
-</div>
-
-<div class="Itens BackColorGp">
-
-
-<img src="/marca/tsentrada.jpg" class="imgOpaca">
-
-<h4>Travestis/Trans</h4><br>
-<h4>Grupo Telegram : <br>
-Acompanhantes:<br>
-<a href="{{ route('MulherTrans') }}">Travestis</a><br>
-</h4>
-</div>
+                            <div class="">
+<a href="{{ route('login') }}">Entrar</a>
+                             </div>
 
 
 

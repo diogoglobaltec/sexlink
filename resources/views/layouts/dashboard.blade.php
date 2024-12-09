@@ -217,12 +217,12 @@ Endereço</button>
    Estado:<br><select name="estado" id="estado1" value="SP"></select>
    <br>
 
-   Cidade:<br><select name="cidade" id="cidade1" value="" ></select>
+   Cidade:<br><select name="cidade" id="cidade1" value="" onblur=pegacidade()></select>
 
     <br /> <br />
 
 
-Região:<br>
+oRegião:<br>
 <select name="regiao">
 <option>norte</option>
 <option>sul</option>

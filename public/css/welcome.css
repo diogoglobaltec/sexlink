@@ -22,7 +22,7 @@ padding:20px;
 .BackColorTs{
 
     background-color: #a1a1;
-    color: #ff3355;
+    color: #ff5;
 }
 
 
@@ -47,11 +47,18 @@ padding:20px;
 
 
 /* links */
-a:hover{
+ a.gp:hover{
 
     background-color: #00ff;
 
 }
+
+ a.ts:hover{
+
+    background-color: #991133;
+
+}
+
 
 
 

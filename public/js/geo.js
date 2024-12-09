@@ -2,7 +2,7 @@
 function pegacidade() {
   rua = document.getElementById('rua').value;
   numero = document.getElementById('numero').value;
-
+  cidade= document.getElementById('cidade1').value;
 
 
 
@@ -12,6 +12,10 @@ function pegacidade() {
     numeroRua= numero
     console.log(nomeRua)
     console.log(numeroRua)
+    console.log('nome da cidade:...'+cidade)
+
+
+
 
 //  Tentativa de ajax
     // Creating Our XMLHttpRequest object
