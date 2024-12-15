@@ -222,7 +222,7 @@ Endereço</button>
     <br /> <br />
 
 
-oooRegião:<br>
+Região:<br>
 <select name="regiao">
 <option>norte</option>
 <option>sul</option>

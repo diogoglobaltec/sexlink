@@ -9,10 +9,12 @@ function pegacidade() {
 
     //console.log(rua)
     nomeRua= rua.replaceAll(' ','%20')
+    nomeCidade= cidade.replaceAll(' ','%20')
     numeroRua= numero
     console.log(nomeRua)
     console.log(numeroRua)
-    console.log('nome da cidade:...'+cidade)
+    console.log('nome da cidade:...'+nomeCidade)
+
 
 
 
@@ -22,7 +24,7 @@ function pegacidade() {
     let xhr = new XMLHttpRequest();
 
     // Making our connection
-    let url =  'https://nominatim.openstreetmap.org/search?q='+numeroRua+'+'+nomeRua+',+são%20paulo&format=json';
+    let url =  'https://nominatim.openstreetmap.org/search?q='+numeroRua+'+'+nomeRua+','+nomeCidade+'+&format=json';
 
 
     console.log(url)
@@ -44,9 +46,12 @@ function pegacidade() {
 
 
 
-            console.log(obj[0].name);
+            console.log(obj.length);
+
+
             console.log(obj[0].lat);
             console.log(obj[0].lon);
+
 
 
 

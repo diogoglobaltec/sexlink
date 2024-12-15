@@ -12,10 +12,21 @@
 
 <div class="Grade">
 <div class="Itens">
-Whatsapp:
+Para anunciar contato:<br>
+
+
+<a href="https://wa.me/5511971972683?text=Estou%20interessada%20em%20anunciar%20!">
+<img src="whats.png" width="20" height="20"> Whatsapp<br></a>
+<a href="">
+<img src="telegram.png" width="20" height="20"> Telegram<br></a>
+
+
+
+
 </div>
 <div class="Itens">
-Telegram:
+
+conteudo
 </div>
 </div>
 
