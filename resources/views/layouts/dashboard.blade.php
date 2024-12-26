@@ -597,8 +597,8 @@ filmar conosco</button>
     </x-slot>
 
 </x-app-layout>
-
-
+<script src="/js/cidades-estados-js/cidades-estados.js">
+</script>
 <script src="/js/geo.js">
 </script>
 
