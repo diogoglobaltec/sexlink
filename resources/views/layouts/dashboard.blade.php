@@ -217,7 +217,7 @@ Endereço</button>
    Estado:<br><select name="estado" id="estado1" value="SP"></select>
    <br>
 
-   Cidade:<br><select name="cidade" id="cidade1" value="" onblur=pegacidade()></select>
+   Cidade:<br><select name="cidade" id="cidade1" value="" ></select>
 
     <br /> <br />
 
@@ -231,16 +231,41 @@ Região:<br>
 <option>centro</option>
 </select>
 
-<br>
-Bairro:<br>
-<input type='text' name='bairro' required>
+
 <br>
 Rua:<br>
-<input type="text" name="rua" id="rua"   onblur=pegacidade() required>
+<input type="text" name="rua" id="rua" onblur=ajaxEnd() onclick=checkValue() >
+<br>
+
+<br>
+<div  onclick=zera()>
+Limpar endereço
+</div>
 <br>
 Numero:<br>
-<input type="text" name="numero" id="numero" onblur=pegacidade() required>
+<input type="text" name="numero" id="numero" >
+
+
+<br>
+
+Selecione seu bairro:<br>
+
+<select id="cel"  onblur=zera()>
+
+</select>
+
+<br>
+
+
+
+
+Bairro:<br>
+<input type='text' name='bairro' id="bairro"   >
+
+
+
 </div>
+
 </div>
 
 <script language="JavaScript" type="text/javascript" charset="utf-8">

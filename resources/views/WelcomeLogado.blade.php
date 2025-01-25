@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <head>
 <title>Bem vindo</title>
+
+<script src="../js/WelcomeLogado.js"></script>
+
+
 </head>
 <body>
 
