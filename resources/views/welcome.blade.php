@@ -30,7 +30,7 @@
 
 
                             <div class="">
-<a href="{{ route('login') }}">Entrar</a>
+<a href="{{ route('login') }}">Login</a>
                              </div>
 
 
